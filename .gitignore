@@ -1,0 +1,57 @@
+# Maven and Java
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+*.log
+*.class
+*.jar
+*.war
+*.ear
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+# Vite build output
+frontend/dist/
+# Environment files
+env/
+.env
+.env.*
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build e arquivos gerados
+backend/target/
+frontend/dist/
+frontend/node_modules/
+
+# Backups locais
+backups/
+*.bak
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Logs e arquivos temporários
+*.log
+.DS_Store
+Thumbs.db
+
+
+# Artefatos gerados pelo Maven
+backend/target/
+
+# Dependências e builds do frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backups temporários
+backups/
+*.bak

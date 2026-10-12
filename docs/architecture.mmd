@@ -1,0 +1,15 @@
+graph TD
+    subgraph Backend
+        B[Spring Boot Application]
+        DB[(PostgreSQL)]
+    end
+    subgraph Frontend
+        F[React + Vite]
+    end
+    B -->|JPA| DB
+    F -->|HTTP| B
+    B -->|OpenAPI| SwaggerUI[Swagger UI]
+    classDef backend fill:#e3f2fd,stroke:#1976d2;
+    classDef frontend fill:#fce4ec,stroke:#c2185b;
+    class B,DB backend;
+    class F frontend;

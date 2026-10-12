@@ -1,0 +1,327 @@
+.integration-container {
+  max-width: 800px;
+}
+
+.integration-card {
+  padding: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.integration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.integration-card h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.status-section {
+  margin: var(--spacing-lg) 0;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+}
+
+.sync-hint {
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: 0.875rem;
+}
+
+.sync-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.stat-box {
+  background: var(--color-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.stat-box .stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-soft);
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+  margin-bottom: 4px;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-box .stat-label {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.error-log {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: var(--radius-md);
+}
+
+.error-log h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.85rem;
+}
+
+.error-log pre {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ===== Central de integração ===== */
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.integration-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.integration-card-header h2 {
+  margin: 0;
+}
+
+.integration-card .error-banner {
+  margin-top: var(--spacing-md);
+}
+
+/* Conta conectada */
+.account-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.account-avatar {
+  border-radius: 50%;
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  flex-shrink: 0;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.account-login {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.account-name {
+  font-size: 0.8rem;
+}
+
+.status-row {
+  margin-top: var(--spacing-md);
+  font-size: 0.8rem;
+}
+
+.last-sync-date {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: var(--spacing-md);
+}
+
+.error-raw {
+  margin-top: var(--spacing-sm);
+  font-size: 0.8rem;
+}
+
+.error-raw summary {
+  cursor: pointer;
+  color: var(--color-text-body);
+}
+
+.error-raw pre {
+  margin-top: var(--spacing-sm);
+  max-height: 200px;
+  overflow: auto;
+}
+
+/* Histórico */
+.history-table-container {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.history-table th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.history-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.history-table tbody tr:hover {
+  background: var(--color-surface-muted);
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.history-detail {
+  color: var(--color-text-body);
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Busca e lista de repositórios */
+.integration-search {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-muted);
+}
+
+.integration-search:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
+.integration-search-input {
+  border: none;
+  background: transparent;
+  color: var(--color-text-main);
+  padding: 10px 0;
+  flex: 1;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.integration-repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.integration-repo-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.integration-repo-item:hover {
+  background: var(--color-surface-muted);
+}
+
+.integration-repo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.integration-repo-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.integration-repo-owner {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.integration-repo-date {
+  font-size: 0.75rem;
+  color: var(--color-text-body);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.language-chip {
+  background: var(--color-primary-muted);
+  color: var(--color-primary-soft);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .integration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integration-repo-item {
+    flex-wrap: wrap;
+  }
+}

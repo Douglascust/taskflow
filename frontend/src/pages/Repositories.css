@@ -1,0 +1,119 @@
+.repositories-container {
+  max-width: 1200px;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  min-width: 240px;
+  color: var(--color-text-muted);
+}
+
+.search-field:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  color: var(--color-text-main);
+  padding: 10px 0;
+  width: 220px;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.repo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.repo-card:hover::before {
+  opacity: 1;
+}
+
+.repo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: 12px;
+}
+
+.repo-card-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.repo-card:hover .repo-card-header h3 {
+  color: var(--color-primary-soft);
+}
+
+.repo-description {
+  flex: 1;
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.repo-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.repo-card-skeleton {
+  height: 220px;
+}
+
+@media (max-width: 640px) {
+  .search-field,
+  .search-input {
+    width: 100%;
+    min-width: 0;
+  }
+}

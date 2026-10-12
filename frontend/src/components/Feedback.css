@@ -1,0 +1,66 @@
+.feedback-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  gap: var(--spacing-sm);
+  min-height: 200px;
+}
+
+.feedback-state h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.feedback-state p {
+  margin: 0;
+  max-width: 420px;
+  font-size: 0.875rem;
+}
+
+.feedback-icon {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feedback-icon.error {
+  color: var(--color-error);
+}
+
+.feedback-action {
+  margin-top: var(--spacing-md);
+}
+
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: var(--color-error-bg);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  color: var(--color-error);
+  font-size: 0.875rem;
+}
+
+.card-interactive {
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.card-interactive:hover {
+  border-color: var(--color-border-glow);
+  box-shadow: var(--glow-primary-soft);
+  transform: translateY(-2px);
+}
+
+.card-interactive:focus-visible {
+  outline: none;
+  border-color: var(--color-border-glow);
+  box-shadow: var(--focus-ring);
+}
